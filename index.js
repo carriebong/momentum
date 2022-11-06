@@ -8,7 +8,7 @@ function renderCurrentTime() {
 let url = `https://worldtimeapi.org/api/timezone/Asia/Seoul`;
 fetch(url)
 .then(res => res.json()).then((data) => {
-    let datetime = data['datetime'].substr(11,8);
+    let datetime = data['datetime'].substr(11,5);
     $('#time').text(datetime);
 });
 }
@@ -16,8 +16,7 @@ fetch(url)
 
 // 1분마다 새로고침해주는 함수 추가함 // 
 function init(){
-    setInterval(renderCurrentTime,60000)
-    setInterval(renderQuote,60000);
+    setInterval(renderCurrentTime,1000);
 }
 
 init()
