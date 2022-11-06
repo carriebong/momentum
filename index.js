@@ -13,8 +13,11 @@ fetch(url)
 });
 }
 
+
+// 1분마다 새로고침해주는 함수 추가함 // 
 function init(){
-    setInterval(renderCurrentTime,60000);
+    setInterval(renderCurrentTime,60000)
+    setInterval(renderQuote,60000);
 }
 
 init()
